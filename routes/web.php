@@ -18,3 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['prefix' => 'developer'],function (){
+
+    Route::get('prueba/api','PruebaApiController@index')->name('developer.prueba.api');
+
+});

@@ -50,6 +50,3 @@ Vue.component('passport-authorized-clients',AuthorizedClients);
 import PersonalAccessTokens from './components/passport/PersonalAccessTokens'
 Vue.component('passport-personal-access-tokens',PersonalAccessTokens);
 
-const app = new Vue({
-    el: '#app',
-});

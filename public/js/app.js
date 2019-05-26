@@ -51814,9 +51814,6 @@ Vue.component('passport-clients', _components_passport_Clients__WEBPACK_IMPORTED
 Vue.component('passport-authorized-clients', _components_passport_AuthorizedClients__WEBPACK_IMPORTED_MODULE_1__["default"]);
 
 Vue.component('passport-personal-access-tokens', _components_passport_PersonalAccessTokens__WEBPACK_IMPORTED_MODULE_2__["default"]);
-var app = new Vue({
-  el: '#app'
-});
 
 /***/ }),
 

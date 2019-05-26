@@ -12,3 +12,20 @@
     </div>
 </div>
 @endsection
+
+@push('scripts')
+<script>
+    const app = new Vue({
+        el: '#root',
+        created() {
+
+        },
+        data: {
+
+        },
+        methods: {
+
+        }
+    });
+</script>
+@endpush
