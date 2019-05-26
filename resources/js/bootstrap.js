@@ -53,3 +53,14 @@ if (token) {
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+window.Vue = require('vue');
+
+import Clientes from './components/passport/Clients'
+Vue.component('passport-clients',Clientes);
+
+import AuthorizedClients from './components/passport/AuthorizedClients'
+Vue.component('passport-authorized-clients',AuthorizedClients);
+
+import PersonalAccessTokens from './components/passport/PersonalAccessTokens'
+Vue.component('passport-personal-access-tokens',PersonalAccessTokens);
