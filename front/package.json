@@ -1,0 +1,24 @@
+{
+  "name": "sysbase",
+  "version": "1.0.0",
+  "description": "My praiseworthy Nuxt.js project",
+  "author": "Esdras Altamirano",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "nuxt": "^2.7.1",
+    "bootstrap-vue": "^2.0.0-rc.11",
+    "bootstrap": "^4.3.1",
+    "@nuxtjs/axios": "^5.5.2",
+    "@nuxtjs/pwa": "^2.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
