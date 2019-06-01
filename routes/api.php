@@ -16,3 +16,9 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return \App\Models\User::all()->toJson();
 });
+
+
+Route::group(['middleware' => 'auth:api'], function() {
+    Route::get('auth/me', 'AuthApiController@local');
+    Route::get('oauth/me', 'AuthApiController@oauth');
+});

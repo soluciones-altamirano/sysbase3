@@ -60,9 +60,12 @@
 
 <script>
 export default {
-  name: 'Login',
-  layout: 'clean',
+    name: 'Login',
+    layout: 'clean',
     auth: false,
+    created(){
+        console.log(this.$auth.$state.loggedIn);
+    },
     data(){
         return {
             form: {
@@ -74,13 +77,32 @@ export default {
     methods: {
         async login(){
 
+            let data = {
+                data: {
+                    grant_type: "password",
+                    client_id: process.env.PASSPORT_PASSWORD_GRANT_ID,
+                    client_secret: process.env.PASSPORT_PASSWORD_GRANT_SECRET,
+                    scope: "*",
+                    username: this.form.email,
+                    password: this.form.password
+                }
+            };
+
+            console.log('login');
+            console.log(data);
+
+
             try {
-                await this.$auth.login({data: this.form});
-            } catch(e) {
-                return;
+                let login = await this.$auth.loginWith("password_grant", data)
+
+            }catch (e) {
+                console.log(e);
             }
 
-            this.$router.push({ name: 'index' });
+
+
+            this.$router.replace("/");
+
 
         }
     }

@@ -26,10 +26,18 @@
               <!--<b-dropdown-item href="#">FA</b-dropdown-item>-->
             <!--</b-nav-item-dropdown>-->
 
-            <b-navbar-nav>
-                <nuxt-link to="auth/login">Ingresar</nuxt-link>
-              <!--<b-nav-item href="#" disabled>Disabled</b-nav-item>-->
-            </b-navbar-nav>
+
+            <b-nav-item v-if="!this.$auth.$state.loggedIn">
+                <b-link to="auth/login">Ingresar</b-link>
+            </b-nav-item>
+
+            <b-nav-item-dropdown right v-else>
+              <!-- Using 'button-content' slot -->
+              <template slot="button-content"><em>User</em></template>
+              <b-dropdown-item href="#">Profile</b-dropdown-item>
+              <b-dropdown-item @click="logout">Sign Out</b-dropdown-item>
+            </b-nav-item-dropdown>
+          </b-navbar-nav>
 
           </b-navbar-nav>
         </b-collapse>
@@ -73,6 +81,12 @@ export default {
       return {
           app_name : pkg.name
       }
+    },
+    methods: {
+        logout() {
+            this.$auth.logout();
+            this.$router.replace("/");
+        }
     }
 }
 </script>

@@ -47,21 +47,42 @@ export default {
   ** Nuxt.js modules
   */
     modules: [
-        // Doc: https://axios.nuxtjs.org/usage
         '@nuxtjs/axios',
-        // Doc: https://bootstrap-vue.js.org/docs/
         'bootstrap-vue/nuxt',
-
         '@nuxtjs/pwa',
-
+        '@nuxtjs/auth',
         '@nuxtjs/dotenv',
     ],
   /*
   ** Axios module configuration
   */
-  axios: {
-    // See https://github.com/nuxt-community/axios-module#options
-  },
+    axios: {
+        baseURL: process.env.LARAVEL_ENDPOINT
+    },
+    auth: {
+        redirect: {
+            login: "/login",
+            logout: "/",
+            callback: "/login",
+            user: "/"
+        },
+        strategies: {
+            password_grant: {
+                _scheme: "local",
+                endpoints: {
+                    login: {
+                        url: "/oauth/token",
+                        method: "post",
+                        propertyName: "access_token"
+                    },
+                    logout: false,
+                    user: {
+                        url: "api/auth/me"
+                    }
+                }
+            }
+        }
+    },
 
   /*
   ** Build configuration

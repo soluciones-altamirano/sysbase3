@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+class AuthApiController extends Controller
+{
+    public function local()
+    {
+        return response()->json(['user' => auth()->user()]);
+    }
+
+    public function oauth()
+    {
+        return response()->json(auth()->user());
+    }
+}
