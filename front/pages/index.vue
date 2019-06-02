@@ -83,9 +83,17 @@ export default {
       }
     },
     methods: {
-        logout() {
-            this.$auth.logout();
-            this.$router.replace("/");
+        async logout() {
+            try {
+                const logout = await this.$auth.logout();
+
+                this.$router.replace("/");
+                this.$toast.success('Salio del sistema con éxito',{duration: 5000})
+
+            }catch (e) {
+                this.$toast.error('Algo a salido Mal',{duration: 5000});
+                console.log(e.response)
+            }
         }
     }
 }

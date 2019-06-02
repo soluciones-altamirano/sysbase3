@@ -52,6 +52,7 @@ export default {
         '@nuxtjs/pwa',
         '@nuxtjs/auth',
         '@nuxtjs/dotenv',
+        '@nuxtjs/toast',
     ],
   /*
   ** Axios module configuration

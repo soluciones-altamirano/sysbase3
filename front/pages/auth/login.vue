@@ -95,13 +95,15 @@ export default {
             try {
                 let login = await this.$auth.loginWith("password_grant", data)
 
+                this.$router.replace("/");
+
+                this.$toast.success('Ingreso al sistema con éxito',{duration: 5000})
             }catch (e) {
-                console.log(e);
+
+                this.$toast.error('Algo a salido Mal',{duration: 5000});
+                console.log(e.response)
             }
 
-
-
-            this.$router.replace("/");
 
 
         }
