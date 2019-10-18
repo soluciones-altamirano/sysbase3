@@ -13,7 +13,7 @@
                 <b-input-group class="mb-3">
 
                   <b-input-group-prepend><b-input-group-text>@</b-input-group-text></b-input-group-prepend>
-                  <input type="email" class="form-control" v-model="form.email" :class="{ 'is-invalid': errors.email }" placeholder="Email">
+                  <input type="text" class="form-control" v-model="form.email" :class="{ 'is-invalid': errors.email }" placeholder="Email">
                   <div class="invalid-feedback" v-if="errors.email">
                     {{errors.email[0]}}
                   </div>
