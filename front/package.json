@@ -20,9 +20,11 @@
     "bootstrap-vue": "2.0.0-rc.1",
     "cross-env": "^5.2.0",
     "nuxt": "^2.7.1",
-    "simple-line-icons": "^2.4.1"
+    "simple-line-icons": "^2.4.1",
+    "vuetify": "^2.1.6"
   },
   "devDependencies": {
+    "@mdi/font": "^4.5.95",
     "nodemon": "^1.19.1"
   }
 }

@@ -40,7 +40,8 @@ export default {
   */
   plugins: [
       './plugins/mixins/validation',
-      './plugins/axios'
+      './plugins/axios',
+      '@plugins/vuetify'
   ],
 
   /*
