@@ -26,14 +26,14 @@
   ##### clonar repo
     git clone https://github.com/altamiranoesdras/sysbase.git
 
-  ##### Acceder a la carpeta  
-    cd sysbase
+  ##### Acceder a la carpeta de laravel  
+    cd sysbase3
+    cd back
     
   ##### instalar dependencias
    
     composer install 		
-    npm install 
-    
+  
   #### crear archivo de entornos
   
     cp .env.example .env   
@@ -46,6 +46,23 @@
     
   ##### Instalar clientes por defecto de Laravel Passport (Autenticación para apis) 
      php artisan passport:install
+  
+  
+  ##### Acceder a la carpeta de nuxt  
+      cd ..
+      cd front
+    
+  ##### instalar dependencias
+   
+    npm install 		
+  
+  ##### Editar Virtual Host
+  
+  ![](editar_virtual_host.PNG)
+  
+    agregar /back a root
+  
+  ![](editar_virtual_host2.PNG)
   
   ### Recargar servidor web de laragon para que se genere el virtual host
   
