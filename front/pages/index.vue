@@ -1,15 +1,15 @@
 <template>
-  <v-app>
-    //Include new components here and see the magics.
-    //BTW,you must have v-app in the root file encompassing all the
-    //Vuetify components
-  </v-app>
+  <div>
+    <h1>home</h1>
+
+  </div>
 </template>
 
 <script>
   import  pkg from '../package';
 
 export default {
+    templatela: 'clean',
   components: {
   },
     data() {
