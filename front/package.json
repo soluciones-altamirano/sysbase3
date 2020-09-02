@@ -17,7 +17,7 @@
     "@nuxtjs/pwa": "^2.6.0",
     "@nuxtjs/toast": "^3.2.1",
     "bootstrap": "^4.3.1",
-    "bootstrap-vue": "2.0.0-rc.1",
+    "bootstrap-vue": "2.0.0-rc.12",
     "cross-env": "^5.2.0",
     "nuxt": "^2.7.1",
     "simple-line-icons": "^2.4.1",
